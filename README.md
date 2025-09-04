@@ -1,6 +1,6 @@
 # LENGUAJES DE MARCAS y SGI - 1º D.A.M 
 
-![Lenguaje de Marcas y Sistemas de Gestión de la Información](./img/lm_portada.png =500x)
+![Lenguaje de Marcas y Sistemas de Gestión de la Información](./img/lm_portada.png)
 
 - Número total de horas del módulo: 67h
 
