@@ -3,6 +3,8 @@
 
 - Número total de horas del módulo: 67h
 
+![Lenguaje de Marcas y Sistemas de Gestión de la Información](./img/lm_portada.png)
+
 ## Evaluación 1
 
 - UD1 - Introducción a los lenguajes de marcas - 2h
