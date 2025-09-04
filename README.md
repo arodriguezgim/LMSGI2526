@@ -1,9 +1,8 @@
 # LENGUAJES DE MARCAS y SGI - 1º D.A.M 
-## I.E.S Segundo de Chomón - Curso 24 25
+
+![Lenguaje de Marcas y Sistemas de Gestión de la Información](./img/lm_portada.png =500x)
 
 - Número total de horas del módulo: 67h
-
-![Lenguaje de Marcas y Sistemas de Gestión de la Información](./img/lm_portada.png)
 
 ## Evaluación 1
 
@@ -24,3 +23,5 @@
 - ~~- UD9 - Sistemas de Gestión Empresarial *~~
 
 * (En 2º de DAM existe el módulo dedicado exclusivamente a SGE, por lo que no lo veremos en este curso)
+
+## I.E.S Segundo de Chomón - Curso 24 25
