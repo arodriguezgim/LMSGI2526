@@ -7,8 +7,8 @@
 ## Evaluación 1
 
 - [UD1 - Introducción a los lenguajes de marcas - 2h](./UD1/readme.md)
-- [UD2 - El lenguaje de marcado MARKDOWN - 4h](./UD2/readme.md)
-- UD3 - El lenguaje HTML - 10h
+- UD2 - El lenguaje de marcado MARKDOWN - 4h
+- [UD3 - El lenguaje HTML - 10h](./UD2/readme.md)
 - UD4 - El lenguaje CSS - 10h
 
 ## Evaluación 2
