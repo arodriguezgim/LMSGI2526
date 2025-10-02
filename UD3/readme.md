@@ -1,4 +1,4 @@
-## 1. Introducción
+## 0. Introducción
 
 HTML (Lenguaje de Marcas de Hipertexto, del inglés HyperText Markup Language) es el componente más básico de la Web. Define el significado y la estructura del contenido web. Además de HTML, generalmente se utilizan otras tecnologías para describir la apariencia/presentación de una página web (CSS) o la funcionalidad/comportamiento (JavaScript).
 
@@ -21,198 +21,476 @@ Del mismo modo que un hipermercado es mejor que un mercado. El hipertexto es mej
 
  ¿Es HTML case sensitive?
 
-## 2. Estructura básica de HTML
+---
 
-Ahora veremos cómo combinar los elementos individuales para formar una página HTML completa:
+## 1. Estructura básica de un documento HTML
+
+Todo documento HTML debe seguir esta estructura:
 
 ```html
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Título de la página</title>
-  </head>
-  <body>
-
-    <h1>Esto es una cabecera</h1>
-    <p>Esto es un párrafo.</p>
-
-    <p id="bienvenida">¡Bienvenido!</p>
-
-  </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera página</title>
+</head>
+<body>
+    <!-- Aquí va el contenido -->
+</body>
 </html>
 ```
 
-- `<!DOCTYPE html>`: El elemento doctype. En sus inicios, cuando el HTML llevaba poco tiempo (alrededor de 1991-1992), los doctypes servían como enlaces al conjunto de reglas que la página HTML debía seguir para que fuera considerado buen HTML. En la actualidad se ignora y se considera un legado histórico que hay que incluir para que todo funcione correctamente.
-- `<html></html>`: El elemento `<html>`. Este elemento envuelve todo el contenido de la página. A veces se lo conoce como el elemento raíz.
-- `<head></head>`: El elemento `<head>` (cabecera). Este elemento actúa como contenedor para todos los parámetros que quieras incluir en el documento HTML que no serán visibles a los visitantes de la página.
-- `<meta charset="utf-8">`: Este elemento establece que tu documento HTML usará la codificación UTF-8, que incluye la gran mayoría de caracteres de todos los idiomas humanos escritos.
-- `<title></title>`: El elemento `<title>`. Este establece el título de la página, que es el título que aparece en la pestaña del navegador en la que se carga la página.
-- `<body></body>`: El elemento `<body>`. Contiene todo el contenido que quieres mostrar a los usuarios cuando visitan tu página, ya sea texto, imágenes, vídeos, juegos, pistas de audio reproducibles o cualquier otra cosa.
+---
 
-<details class="card mb-2">
-  <summary class="card-header question">¿Cómo vemos el código HTML de una web?</summary>
-  <div class="card-body" markdown="1">
+## 2. Etiquetas de títulos
 
-F12 o Click derecho e Inspeccionar
-
-  </div>
-</details>
-
-<hr>
-Veamos el código fuente de esta página web. ¿Tiene la estructura que se ha explicado?
-
-### 2.1. Elemento
-
-Los elementos HTML son los componentes básicos de un documento HTML. En esta página que estás leyendo, por ejemplo, el título, un párrafo y una imagen son elementos H1, P e IMG, respectivamente. No todos los tipos de elemento son visibles: algunos tienen como única función agrupar a otros elementos, por ejemplo.
-
-Exploremos un poco el elemento párrafo:
-
-![Elemento y etiquetas HTML](../img/elementoEtiquetas.png)
-_Elemento y etiquetas HTML_
-
-Las principales partes de nuestro elemento son:
-
-- **La etiqueta de apertura**: consiste en el nombre del elemento (en este caso, p), encerrado entre paréntesis angulares de apertura y cierre. Esta etiqueta de apertura marca dónde comienza el elemento o comienza a tener efecto. En este ejemplo, precede al comienzo del texto del párrafo.
-- **El contenido**: Este es el contenido del elemento. En este ejemplo, es el texto del párrafo.
-- **La etiqueta de cierre**: Es lo mismo que la etiqueta de apertura, excepto que incluye una barra diagonal antes del nombre del elemento. Esto indica dónde termina el elemento; en este caso, dónde finaliza el párrafo. No incluir una etiqueta de cierre es un error común de principiante, y puede conducir a extraños resultados.
-  
-El **elemento** lo conforman la etiqueta de apertura, seguida del contenido, seguido de la etiqueta de cierre.
-
-<details class="card mb-2">
-  <summary class="card-header question">¿Cómo se llama un elemento que tiene clave pero no tiene valor?</summary>
-  <div class="card-body" markdown="1">
-
-Elemento vacío.
-
-  </div>
-</details>
-
-### 2.2. Atributo
-
-Los elementos también pueden tener atributos. Los atributos tienen este aspecto:
-
-![Atributo HTML](../img/atributo.png)
-_Atributo HTML_
-
-Los atributos contienen información extra sobre el elemento que no se mostrará en el contenido. En este caso, el atributo class asigna al elemento un identificador que se puede utilizar para dotarlo de información de estilo.
-
-Un atributo debería tener:
-
-Un espacio entre este y el nombre del elemento. (Para un elemento con más de un atributo, los atributos también deben estar separados por espacios).
-El nombre del atributo, seguido por un signo igual.
-Un valor del atributo, rodeado de comillas de apertura y cierre.
-
-![Nomenclatura HTML](../img/nomenclaturaHtml.png)
-_Nomenclatura HTML_
-
-<details class="card mb-2">
-  <summary class="card-header question">¿Para que sirve el atributo alt o texto alternativo?</summary>
-  <div class="card-body" markdown="1">
-
-El atributo ALT o etiqueta ALT es un atributo HTML para un texto que describe una imagen. El atributo ALT se coloca directamente en la etiqueta de la imagen. Si una imagen no se puede mostrar por alguna razón, el atributo ALT proporciona texto alternativo para mostrar en su lugar.
-
-  </div>
-</details>
-
-<details class="card mb-2">
-  <summary class="card-header question">¿Qué es un atributo booleano?</summary>
-  <div class="card-body" markdown="1">
-
-Son atributos que tienen clave pero no tienen valor. Por ejemplo en este input `<input type="checkbox" name="vehicle" value="car" checked>` el atributo `checked` es booleano.
-
-Los valores true y false están especificamente prohibidos en los atributos booleanos. Para representar el valor false el atributo no debe aparecer.
-
-Todos los siguientes ejemplos son correctos y equivalentes:
+HTML proporciona 6 niveles de títulos, desde `<h1>` hasta `<h6>`:
 
 ```html
-<input type="checkbox" name="vehicle" value="car" checked disabled>
-<input type="checkbox" name="vehicle" value="car" checked="checked" disabled="disabled">
-<input type="checkbox" name="vehicle" value="car" checked disabled="">
+<h1>Título principal (H1)</h1>
+<h2>Subtítulo (H2)</h2>
+<h3>Título de nivel 3 (H3)</h3>
+<h4>Título de nivel 4 (H4)</h4>
+<h5>Título de nivel 5 (H5)</h5>
+<h6>Título de nivel 6 (H6)</h6>
 ```
 
-  </div>
-</details>
+**Importante:** Solo debe haber un `<h1>` por página, ya que representa el título principal del documento.
 
-{:.question}
-¿Es correcto el elemento `<a href=https://www.mozilla.org/>mi sitio web favorito</a>`?
+---
 
-{:.question}
-¿Es correcto el elemento `<a href='http://www.ejemplo.com'>Un enlace a mi ejemplo.</a>`?
+## 3. Párrafos y saltos de línea
 
-{:.question}
-¿Es correcto el elemento `<a href='http://www.ejemplo.com' title=Es correcto o no>Un enlace a mi ejemplo.</a>`?
+### Párrafos
+```html
+<p>Este es un párrafo de texto. Los párrafos se separan automáticamente 
+con espacio vertical.</p>
 
-{:.question}
-¿Es correcto el elemento `<a href="http://www.ejemplo.com" title="¿Es 'correcto'?">Un enlace a mi ejemplo.</a>`?
+<p>Este es otro párrafo diferente.</p>
+```
 
-{:.question}
-¿Es correcto el elemento `<a href='http://www.ejemplo.com' title='¿Es 'correcto'?'>Un enlace a mi ejemplo.</a>`?
+### Saltos de línea
+```html
+<p>Primera línea<br>
+Segunda línea en el mismo párrafo</p>
+```
 
-<details class="card mb-2">
-  <summary class="card-header question">¿Qué es un lenguaje de programación?</summary>
-  <div class="card-body" markdown="1">
+### Línea horizontal
+```html
+<hr>
+```
 
-Un lenguaje de programación es un lenguaje formal que le proporciona a una persona, en este caso el programador, la capacidad de escribir (o programar) una serie de instrucciones o secuencias de órdenes en forma de algoritmos con el fin de controlar el comportamiento físico o lógico de un sistema informático, de manera que se puedan obtener diversas clases de datos o ejecutar determinadas tareas.
+---
 
-A todo este conjunto de órdenes escritas mediante un lenguaje de programación se le denomina programa informático.
+## 4. Formato de texto
 
-<!-- Comentario para que no se descuajeringue la cosa -->
-  </div>
-</details>
+### Negrita y énfasis
+```html
+<strong>Texto importante (negrita semántica)</strong>
+<b>Texto en negrita (solo visual)</b>
 
-<details class="card mb-2">
-  <summary class="card-header question">¿Es HTML un lenguaje de programación?
-</summary>
-  <div class="card-body">
+<em>Texto enfatizado (cursiva semántica)</em>
+<i>Texto en cursiva (solo visual)</i>
+```
 
-HTML es una forma de representar la información. No programas el comportamiento de una computadora por lo tanto no es un lenguaje de programación.
+### Otros formatos
+```html
+<u>Texto subrayado</u>
+<s>Texto tachado</s>
+<mark>Texto resaltado</mark>
+<small>Texto pequeño</small>
+<sub>Subíndice: H<sub>2</sub>O</sub>
+<sup>Superíndice: X<sup>2</sup></sup>
+<code>Código en línea: console.log()</code>
+<pre>Texto preformateado
+    que respeta    espacios
+    y saltos de línea</pre>
+```
 
-HTML ("Hypertext Markup Language") no es un lenguaje de programación. Es un lenguaje de marcado que le dice a los navegadores web cómo estructurar las páginas web que estás visitando. Puede ser tan complejo o tan simple como desee el desarrollador web. El HTML consiste en una serie de elementos, que puedes utilizar para encerrar, delimitar o marcar diferentes partes del contenido para hacer que aparezcan de una cierta manera, o actúen de determinada forma. Las etiquetas que delimitan un fragmento de contenido pueden hacer que dicho contenido enlace con otra página, ponga una palabra en cursiva, etcétera. Por ejemplo, dada la siguiente línea de contenido:
+---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/b6sNxnldPhU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## 5. Listas
 
-  </div>
-</details>
+### Lista desordenada (viñetas)
+```html
+<ul>
+    <li>Primer elemento</li>
+    <li>Segundo elemento</li>
+    <li>Tercer elemento</li>
+</ul>
+```
 
-## Formularios
+### Lista ordenada (numerada)
+```html
+<ol>
+    <li>Paso 1</li>
+    <li>Paso 2</li>
+    <li>Paso 3</li>
+</ol>
+```
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tqLJoWfdqIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+### Lista de definiciones
+```html
+<dl>
+    <dt>HTML</dt>
+    <dd>HyperText Markup Language - Lenguaje de marcado de hipertexto</dd>
+    
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets - Hojas de estilo en cascada</dd>
+</dl>
+```
 
-{:.question}
-¿Cuáles son los pasos que debo seguir para poder ver que información estaría enviando a un servidor desde un formulario?
+### Listas anidadas
+```html
+<ul>
+    <li>Elemento 1
+        <ul>
+            <li>Subelemento 1.1</li>
+            <li>Subelemento 1.2</li>
+        </ul>
+    </li>
+    <li>Elemento 2</li>
+</ul>
+```
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/u1JRC24rUfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+---
 
-<details class="card mb-2">
-  <summary class="card-header"> Preguntas sobre el vídeo</summary>
-  <div class="card-body" markdown="1">
+## 6. Tablas
 
-1. ¿Para que sirve el elemento `label`?
-1. ¿Para que sirve el atributo for en un elemento `label`?
-1. ¿Para que sirve el atributo name en un elemento `input`?
-1. ¿Para que sirve el atributo `placeholder`?
-1. ¿Se te ocurre un caso real donde necesitemos utilizar dos elementos form dentro de un mismo html y tenga sentido?
-1. ¿Para que sirve el atributo `type="email"`?
-1. ¿Para que sirve el atributo `type="password"`? ¿Se envia la contraseña encriptada si ponemos el atributo `type="password"`?
-1. ¿El atributo `type="submit"` en que dos elementos lo podemos usar? ¿Para que sirve este atributo `type="submit"`?
-1. ¿Para qué sirve el `type="reset"`?
-1. ¿Qué tipos de input existen? text, password, email, etc.
-1. ¿Para qué sirve el atributo `name`? ¿Y el `value`?
-1. ¿El valor de los atributos debe ir siempre entre comillas dobles?
-1. ¿Qué diferencia existe entre los input `type="radio"` y `type="checkbox"`?
-1. ¿Qué diferencia hay entre el `type="date"` y `type="datetime-local"` y `type="time"`?
-1. ¿Podemos en un input con atributo `type="number"` poner números negativos? ¿Y números decimales?
-1. ¿Cuál es el atributo que hace que solo puedas elegir una opción dentro del tipo/categoría?
-1. ¿Depende el formato de la fecha de la lengua en la que escribimos el html (`<html lang="es">`)?
+### Tabla básica
+```html
+<table border="1">
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Edad</th>
+    </tr>
+    <tr>
+        <td>Juan</td>
+        <td>Pérez</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>María</td>
+        <td>García</td>
+        <td>30</td>
+    </tr>
+</table>
+```
 
-<!-- Comentario para que no se descuajeringue la cosa -->
-  </div>
-</details>
+### Tabla con estructura semántica
+```html
+<table>
+    <thead>
+        <tr>
+            <th>Asignatura</th>
+            <th>Nota</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Programación</td>
+            <td>8.5</td>
+        </tr>
+        <tr>
+            <td>Bases de datos</td>
+            <td>7.0</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Media</td>
+            <td>7.75</td>
+        </tr>
+    </tfoot>
+</table>
+```
 
-## 3. Bibliografía
+### Colspan (fusión horizontal)
+```html
+<table border="1">
+    <tr>
+        <th colspan="3">Datos del Alumno</th>
+    </tr>
+    <tr>
+        <td>Nombre</td>
+        <td>Apellido</td>
+        <td>Edad</td>
+    </tr>
+    <tr>
+        <td>Ana</td>
+        <td>López</td>
+        <td>22</td>
+    </tr>
+</table>
+```
 
-- [HTML: Lenguaje de etiquetas de hipertexto (Developer Mozilla)](https://developer.mozilla.org/es/docs/Web/HTML)
-- [HTML Tutorial (W3Schools)](https://www.w3schools.com/html/)
-- [Lenguaje HTML5](https://lenguajehtml.com/html/introduccion/que-es-html/)
-- [Atributos booleanos en HTML](http://notasjs.blogspot.com/2014/02/atributos-booleanos-en-html.html)
+### Rowspan (fusión vertical)
+```html
+<table border="1">
+    <tr>
+        <th rowspan="2">Ciclo</th>
+        <th>Curso</th>
+        <th>Alumnos</th>
+    </tr>
+    <tr>
+        <td>1º DAM</td>
+        <td>30</td>
+    </tr>
+    <tr>
+        <th rowspan="2">DAW</th>
+        <td>1º DAW</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>2º DAW</td>
+        <td>28</td>
+    </tr>
+</table>
+```
+
+### Combinando colspan y rowspan
+```html
+<table border="1">
+    <tr>
+        <th rowspan="2">Día</th>
+        <th colspan="2">Horario</th>
+    </tr>
+    <tr>
+        <th>Mañana</th>
+        <th>Tarde</th>
+    </tr>
+    <tr>
+        <td>Lunes</td>
+        <td>Programación</td>
+        <td>Bases de Datos</td>
+    </tr>
+</table>
+```
+
+---
+
+## 7. Etiquetas semánticas HTML5
+
+HTML5 introduce etiquetas que dan significado al contenido:
+
+### Estructura de página
+```html
+<header>
+    <h1>Mi Sitio Web</h1>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre">Sobre nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article>
+        <h2>Título del artículo</h2>
+        <p>Contenido del artículo...</p>
+    </article>
+    
+    <section>
+        <h2>Sección de contenido</h2>
+        <p>Información relacionada...</p>
+    </section>
+    
+    <aside>
+        <h3>Barra lateral</h3>
+        <p>Contenido complementario...</p>
+    </aside>
+</main>
+
+<footer>
+    <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+</footer>
+```
+
+### Descripción de las etiquetas semánticas
+
+- **`<header>`**: Encabezado de la página o de una sección
+- **`<nav>`**: Menú de navegación
+- **`<main>`**: Contenido principal del documento (solo uno por página)
+- **`<article>`**: Contenido independiente y autocontenido
+- **`<section>`**: Sección temática del documento
+- **`<aside>`**: Contenido relacionado pero secundario (barras laterales)
+- **`<footer>`**: Pie de página
+- **`<figure>`** y **`<figcaption>`**: Para imágenes con pie de foto
+
+```html
+<figure>
+    <img src="imagen.jpg" alt="Descripción">
+    <figcaption>Pie de foto explicativo</figcaption>
+</figure>
+```
+
+---
+
+## 8. Formularios en HTML
+
+Los formularios permiten recoger información del usuario.
+
+### Estructura básica
+```html
+<form action="procesar.php" method="post">
+    <!-- Campos del formulario -->
+</form>
+```
+
+### Campos de texto
+```html
+<form>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password">
+    
+    <label for="comentarios">Comentarios:</label>
+    <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+</form>
+```
+
+### Botones de radio y checkboxes
+```html
+<form>
+    <p>Selecciona tu género:</p>
+    <input type="radio" id="masculino" name="genero" value="M">
+    <label for="masculino">Masculino</label>
+    
+    <input type="radio" id="femenino" name="genero" value="F">
+    <label for="femenino">Femenino</label>
+    
+    <p>Selecciona tus intereses:</p>
+    <input type="checkbox" id="programacion" name="intereses" value="prog">
+    <label for="programacion">Programación</label>
+    
+    <input type="checkbox" id="diseno" name="intereses" value="dis">
+    <label for="diseno">Diseño</label>
+    
+    <input type="checkbox" id="redes" name="intereses" value="red">
+    <label for="redes">Redes</label>
+</form>
+```
+
+### Listas desplegables
+```html
+<form>
+    <label for="curso">Selecciona tu curso:</label>
+    <select id="curso" name="curso">
+        <option value="">-- Selecciona --</option>
+        <option value="1dam">1º DAM</option>
+        <option value="2dam">2º DAM</option>
+        <option value="1daw">1º DAW</option>
+        <option value="2daw">2º DAW</option>
+    </select>
+</form>
+```
+
+### Otros tipos de input
+```html
+<form>
+    <label for="fecha">Fecha de nacimiento:</label>
+    <input type="date" id="fecha" name="fecha">
+    
+    <label for="hora">Hora:</label>
+    <input type="time" id="hora" name="hora">
+    
+    <label for="numero">Edad:</label>
+    <input type="number" id="numero" name="edad" min="18" max="100">
+    
+    <label for="rango">Valoración:</label>
+    <input type="range" id="rango" name="valoracion" min="0" max="10">
+    
+    <label for="color">Color favorito:</label>
+    <input type="color" id="color" name="color">
+    
+    <label for="archivo">Subir archivo:</label>
+    <input type="file" id="archivo" name="archivo">
+</form>
+```
+
+### Botones de envío
+```html
+<form>
+    <input type="submit" value="Enviar formulario">
+    <input type="reset" value="Limpiar">
+    <button type="submit">Enviar con botón</button>
+</form>
+```
+
+### Formulario completo de ejemplo
+```html
+<form action="registro.php" method="post">
+    <fieldset>
+        <legend>Datos personales</legend>
+        
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}">
+    </fieldset>
+    
+    <fieldset>
+        <legend>Información académica</legend>
+        
+        <label for="ciclo">Ciclo formativo:</label>
+        <select id="ciclo" name="ciclo" required>
+            <option value="">-- Selecciona --</option>
+            <option value="dam">DAM</option>
+            <option value="daw">DAW</option>
+            <option value="asir">ASIR</option>
+        </select>
+        
+        <p>¿Has estudiado antes programación?</p>
+        <input type="radio" id="si" name="experiencia" value="si">
+        <label for="si">Sí</label>
+        
+        <input type="radio" id="no" name="experiencia" value="no">
+        <label for="no">No</label>
+    </fieldset>
+    
+    <input type="checkbox" id="terminos" name="terminos" required>
+    <label for="terminos">Acepto los términos y condiciones</label>
+    
+    <br><br>
+    <input type="submit" value="Registrarse">
+    <input type="reset" value="Borrar datos">
+</form>
+```
+
+---
+
+## Atributos importantes en formularios
+
+- **`required`**: Campo obligatorio
+- **`placeholder`**: Texto de ayuda dentro del campo
+- **`disabled`**: Deshabilita el campo
+- **`readonly`**: Solo lectura (no se puede modificar)
+- **`maxlength`**: Número máximo de caracteres
+- **`pattern`**: Expresión regular para validar el formato
+- **`autofocus`**: El campo recibe el foco al cargar la página
+- **`autocomplete`**: Activa/desactiva el autocompletado
+
+---
+
+## Enlaces y recursos adicionales
+
+- **MDN Web Docs**: [developer.mozilla.org](https://developer.mozilla.org/es/)
+- **W3Schools**: [w3schools.com](https://www.w3schools.com/)
+- **Validador HTML**: [validator.w3.org](https://validator.w3.org/)
+
+---
+
+## [Ejercicios para practicar](./ejercicioshtml.md) Ejercicios para practicar esta semana
