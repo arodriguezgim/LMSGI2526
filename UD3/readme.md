@@ -23,6 +23,7 @@ Del mismo modo que un hipermercado es mejor que un mercado. El hipertexto es mej
 
 ---
 
+
 ## 1. Estructura básica de un documento HTML
 
 Todo documento HTML debe seguir esta estructura:
@@ -271,7 +272,88 @@ Segunda línea en el mismo párrafo</p>
 
 ---
 
-## 7. Etiquetas semánticas HTML5
+## 7. La etiqueta `<div>` - Contenedor genérico
+
+La etiqueta `<div>` es uno de los elementos más utilizados en HTML. Es un **contenedor genérico** que se usa para agrupar otros elementos y aplicarles estilos o comportamientos comunes.
+
+### ¿Qué hace `<div>`?
+
+Por sí mismo, `<div>` no hace nada visible. No tiene ningún estilo predefinido ni significado semántico. Es simplemente una "caja" invisible que agrupa contenido.
+
+### ¿Para qué se usa?
+
+```html
+<!-- Agrupar elementos relacionados -->
+<div>
+    <h2>Título de la sección</h2>
+    <p>Primer párrafo de contenido.</p>
+    <p>Segundo párrafo de contenido.</p>
+</div>
+
+<!-- Crear secciones para aplicar estilos (con CSS) -->
+<div style="background-color: lightblue; padding: 20px;">
+    <h3>Caja con fondo azul</h3>
+    <p>Este contenido está dentro de un div con estilo.</p>
+</div>
+
+<!-- Estructurar el layout de la página -->
+<div class="contenedor">
+    <div class="columna-izquierda">
+        <p>Contenido izquierda</p>
+    </div>
+    <div class="columna-derecha">
+        <p>Contenido derecha</p>
+    </div>
+</div>
+```
+
+### Ejemplo práctico: Tarjeta de producto
+
+```html
+<div style="border: 1px solid #ccc; padding: 15px; width: 300px;">
+    <h3>Laptop HP</h3>
+    <img src="laptop.jpg" alt="Laptop" width="100%">
+    <p>Procesador Intel Core i5</p>
+    <p><strong>Precio: 599€</strong></p>
+    <button>Comprar</button>
+</div>
+```
+
+### `<div>` vs etiquetas semánticas
+
+Antes de HTML5, se usaba `<div>` para todo. Ahora es mejor usar etiquetas semánticas cuando sea posible:
+
+```html
+<!-- ❌ Menos recomendado -->
+<div id="cabecera">
+    <div id="menu">...</div>
+</div>
+
+<!-- ✅ Más recomendado -->
+<header>
+    <nav>...</nav>
+</header>
+```
+
+**Regla práctica:** Usa `<div>` cuando necesites un contenedor pero ninguna etiqueta semántica sea apropiada.
+
+### `<span>` - El hermano pequeño de `<div>`
+
+Similar a `<div>`, pero `<span>` es **en línea** (no crea saltos de línea):
+
+```html
+<p>Este texto tiene una <span style="color: red;">palabra en rojo</span> dentro.</p>
+
+<p>Temperatura: <span id="temp">25</span>°C</p>
+```
+
+**Diferencia clave:**
+- `<div>`: Contenedor de bloque (crea nueva línea)
+- `<span>`: Contenedor en línea (dentro del flujo del texto)
+
+---
+
+## 8. Etiquetas semánticas HTML5
 
 HTML5 introduce etiquetas que dan significado al contenido:
 
@@ -330,7 +412,7 @@ HTML5 introduce etiquetas que dan significado al contenido:
 
 ---
 
-## 8. Formularios en HTML
+## 9. Formularios en HTML
 
 Los formularios permiten recoger información del usuario.
 
@@ -492,5 +574,6 @@ Los formularios permiten recoger información del usuario.
 - **Validador HTML**: [validator.w3.org](https://validator.w3.org/)
 
 ---
+
 
 ## [Ejercicios para practicar](./ejercicioshtml.md) Ejercicios para practicar esta semana
