@@ -23,7 +23,6 @@ Del mismo modo que un hipermercado es mejor que un mercado. El hipertexto es mej
 
 ---
 
-
 ## 1. Estructura básica de un documento HTML
 
 Todo documento HTML debe seguir esta estructura:
@@ -111,7 +110,111 @@ Segunda línea en el mismo párrafo</p>
 
 ---
 
-## 5. Listas
+## 5. Enlaces e imágenes
+
+### Enlaces (hipervínculos)
+
+Los enlaces se crean con la etiqueta `<a>` (anchor):
+
+```html
+<!-- Enlace básico -->
+<a href="https://www.google.com">Ir a Google</a>
+
+<!-- Enlace que abre en nueva pestaña -->
+<a href="https://www.github.com" target="_blank">GitHub (nueva pestaña)</a>
+
+<!-- Enlace a otra página del mismo sitio -->
+<a href="contacto.html">Ir a Contacto</a>
+
+<!-- Enlace a una sección de la misma página -->
+<a href="#seccion2">Ir a la sección 2</a>
+
+<!-- Enlace de correo electrónico -->
+<a href="mailto:info@ejemplo.com">Enviar email</a>
+
+<!-- Enlace de teléfono -->
+<a href="tel:+34123456789">Llamar por teléfono</a>
+```
+
+### Atributos importantes de los enlaces
+
+- **`href`**: URL de destino (obligatorio)
+- **`target="_blank"`**: Abre en nueva pestaña
+- **`title`**: Texto que aparece al pasar el ratón
+- **`download`**: Descarga el archivo en lugar de abrirlo
+
+```html
+<a href="documento.pdf" download title="Descargar PDF">
+    Descargar documento
+</a>
+```
+
+### Imágenes
+
+Las imágenes se insertan con la etiqueta `<img>`:
+
+```html
+<!-- Imagen básica -->
+<img src="imagen.jpg" alt="Descripción de la imagen">
+
+<!-- Imagen con dimensiones -->
+<img src="foto.png" alt="Mi foto" width="300" height="200">
+
+<!-- Imagen desde URL externa -->
+<img src="https://ejemplo.com/imagen.jpg" alt="Imagen externa">
+
+<!-- Imagen responsive (se adapta al contenedor) -->
+<img src="banner.jpg" alt="Banner" style="max-width: 100%; height: auto;">
+```
+
+### Atributos importantes de las imágenes
+
+- **`src`**: Ruta de la imagen (obligatorio)
+- **`alt`**: Texto alternativo (obligatorio para accesibilidad)
+- **`width`** y **`height`**: Dimensiones en píxeles
+- **`title`**: Texto al pasar el ratón
+
+### Imagen como enlace
+
+```html
+<a href="galeria.html">
+    <img src="miniatura.jpg" alt="Ver galería completa" width="150">
+</a>
+```
+
+### Rutas relativas vs absolutas
+
+```html
+<!-- Ruta relativa: mismo directorio -->
+<img src="logo.png" alt="Logo">
+
+<!-- Ruta relativa: carpeta images -->
+<img src="images/foto.jpg" alt="Foto">
+
+<!-- Ruta relativa: directorio superior -->
+<img src="../imagenes/banner.jpg" alt="Banner">
+
+<!-- Ruta absoluta: desde la raíz del sitio -->
+<img src="/assets/images/logo.png" alt="Logo">
+
+<!-- URL completa externa -->
+<img src="https://ejemplo.com/imagen.jpg" alt="Imagen">
+```
+
+### Figure y figcaption (HTML5)
+
+Para imágenes con pie de foto:
+
+```html
+<figure>
+    <img src="grafico.png" alt="Gráfico de ventas 2024" width="500">
+    <figcaption>Figura 1: Evolución de ventas durante 2024</figcaption>
+</figure>
+```
+
+---
+
+## 6. Listas
 
 ### Lista desordenada (viñetas)
 ```html
@@ -157,7 +260,7 @@ Segunda línea en el mismo párrafo</p>
 
 ---
 
-## 6. Tablas
+## 7. Tablas
 
 ### Tabla básica
 ```html
@@ -272,7 +375,7 @@ Segunda línea en el mismo párrafo</p>
 
 ---
 
-## 7. La etiqueta `<div>` - Contenedor genérico
+## 8. La etiqueta `<div>` - Contenedor genérico
 
 La etiqueta `<div>` es uno de los elementos más utilizados en HTML. Es un **contenedor genérico** que se usa para agrupar otros elementos y aplicarles estilos o comportamientos comunes.
 
@@ -353,7 +456,7 @@ Similar a `<div>`, pero `<span>` es **en línea** (no crea saltos de línea):
 
 ---
 
-## 8. Etiquetas semánticas HTML5
+## 9. Etiquetas semánticas HTML5
 
 HTML5 introduce etiquetas que dan significado al contenido:
 
@@ -412,7 +515,7 @@ HTML5 introduce etiquetas que dan significado al contenido:
 
 ---
 
-## 9. Formularios en HTML
+## 10. Formularios en HTML
 
 Los formularios permiten recoger información del usuario.
 
