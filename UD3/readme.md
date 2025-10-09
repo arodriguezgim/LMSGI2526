@@ -678,5 +678,3 @@ Los formularios permiten recoger información del usuario.
 
 ---
 
-
-## [Ejercicios para practicar](./ejercicioshtml.md) Ejercicios para practicar esta semana
