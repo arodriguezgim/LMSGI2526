@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./enlaces.html">Enlaces e Imágenes</a></li>
+            <li><a href="./listas.html">Listas</a></li>
+            <li><a href="./tablas.html">Tablas</a></li>
+            <li><a href="./etiquetas.html">Nuevas etiquetas html5</a></li>
+            <li><a href="./formularios.html">Formularios</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <h1>Formularios</h1>
+    <form action="./formulariorecibido.html" method="post">
+        <!-- Aquí van todos campos del formulario -->
+        <p>
+            <label for="name">Nombre:</label> 
+            <input type="text" id="name" name="nombre" placeholder="Inserte su nombre">
+        </p>
+        <p>
+            <label for="apellido">Apellidos:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Apellidos">
+        </p>
+        <p>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" name="email" id="email" placeholder="Correo electrónico">
+        </p>
+        <p>
+            <label for="pass">Contraseña:</label>
+            <input type="password" name="pass" id="pass">
+        </p>
+        <p>
+            <label for="comentario">Comentario:</label>
+            <textarea name="comentario" id="comentario" rows="10" cols="60"></textarea>
+        </p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar Formulario">
+    </form>
+    <hr>
+    <h2>Formulario de registro de socios</h2>
+    <form action="#">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <p>
+                <label for="name">Nombre:</label> 
+                <input type="text" id="name" name="nombre" placeholder="Inserte su nombre">
+            </p>
+            <p>
+                <label for="apellido">Apellidos:</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Apellidos">
+            </p>
+            <p>
+                <label for="ncto">Fecha de nacimiento:</label>
+                <input type="date" name="ncto" id="ncto" max="2025-01-01" min="2023-01-01">
+            </p>
+            <p> 
+                <label for="curso">Selecciona tu curso:</label>
+                <select name="curso" id="curso">
+                    <option value="">--Selecciona tu curso --</option>
+                    <optgroup label="SMR">
+                        <option value="1smr">1º SMR</option>
+                        <option value="2smr">2º SMR</option>
+                    </optgroup>
+                    <optgroup label="DAM">
+                        <option value="1dam">1ª DAM</option>
+                        <option value="2dam">2ª DAM</option>
+                    </optgroup>
+                    
+                </select>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Aficiones / Gustos</legend>
+            <label for="color">Color favorito:</label>
+            <input type="color" name="color" id="color">
+        </fieldset>
+    </form>
+</body>
+</html>
