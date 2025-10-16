@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de socios</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./enlaces.html">Enlaces e Imágenes</a></li>
+            <li><a href="./listas.html">Listas</a></li>
+            <li><a href="./tablas.html">Tablas</a></li>
+            <li><a href="./etiquetas.html">Nuevas etiquetas html5</a></li>
+            <li><a href="./formularios.html">Formularios</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <h2>Formulario de registro de socios</h2>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <p>
+                <label for="name">Nombre:</label> 
+                <input type="text" id="name" name="nombre" placeholder="Inserte su nombre">
+            </p>
+            <p>
+                <label for="apellido">Apellidos:</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Apellidos">
+            </p>
+            <p>
+                <label for="ncto">Fecha de nacimiento:</label>
+                <input type="date" name="ncto" id="ncto" max="2025-01-01" min="2023-01-01">
+            </p>
+            <p> 
+                <label for="curso">Selecciona tu curso:</label>
+                <select name="curso" id="curso" >
+                    <option value="">--Selecciona tu curso --</option>
+                    <optgroup label="SMR">
+                        <option value="1smr">1º SMR</option>
+                        <option value="2smr">2º SMR</option>
+                    </optgroup>
+                    <optgroup label="DAM">
+                        <option value="1dam">1ª DAM</option>
+                        <option value="2dam">2ª DAM</option>
+                    </optgroup>
+                    
+                </select>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Otros datos personales</legend>
+            <p>
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" name="email" id="correo" placeholder="email">
+            </p>
+            <p>
+                <label for="pass">Contraseña:</label>
+                <input type="password" name="password" id="pass">
+            </p>
+            <p>
+                <label for="tfno">Móvil:</label>
+                <input type="tel" id="tfno" name="tfno" pattern="[0-9]{9}" placeholder="696969696" maxlength="9" >
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Aficiones / Gustos</legend>
+            <p>
+                <label for="color">Color favorito:</label>
+                <input type="color" name="color" id="color">
+            </p>
+            <p> 
+                <p>¿Has estudiado antes programación?</p>
+                <input type="radio" name="estudios" id="si" value="si">
+                <label for="si">Sí</label>
+                <input type="radio" name="estudios" id="no" value="no">
+                <label for="no">No</label>
+                <input type="radio" name="estudios" id="nr" value="noresponde">
+                <label for="nr">No quiero responder</label>
+            </p>
+            <p> 
+                <p>¿Cuál es tu profesor favorito?</p>
+                <input type="radio" name="profesor" id="mario" value="mario">
+                <label for="mario">Mario</label><br>
+                <input type="radio" name="profesor" id="pascual" value="pascual">
+                <label for="pascual">Pascual</label><br>
+                <input type="radio" name="profesor" id="angel" value="angel">
+                <label for="angel">Angel</label><br>
+                <input type="radio" name="profesor" id="loli" value="loli">
+                <label for="loli">Loli</label><br>
+            </p>
+            <p>
+                Selecciona tus asignaturas favoritas: <br>
+                <input type="checkbox" name="modulosfavoritos" id="lmsgi" value="lmsgi">
+                <label for="lmsgi">Lenguaje de Marcas</label><br>
+                <input type="checkbox" name="modulosfavoritos" id="prog" value="prog">
+                <label for="prog">Programación</label><br>
+                <input type="checkbox" name="modulosfavoritos" id="entornos" value="entornos">
+                <label for="entornos">Entornos de desarrollo</label><br>
+                <input type="checkbox" name="modulosfavoritos" id="bbdd" value="bbdd">
+                <label for="bbdd">Bases de Datos</label><br>
+            </p>
+        </fieldset>
+        <fieldset>
+            <p>
+                <label for="cvitae">Sube aquí tu  currículum en formato pdf.</label><br>
+                <input type="file" name="cv" id="cvitae" accept=".pdf">
+                
+            </p>
+        </fieldset>
+    </form>
+    
+</body>
+</html>
