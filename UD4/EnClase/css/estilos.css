@@ -1,0 +1,14 @@
+/* TODO el codigo de aqui es CSS */
+/* Selector de elemento*/
+p {
+    color: red;
+}
+
+mark {
+    background-color: deepskyblue;
+}
+
+/* Selectores de clase */
+.destacado {
+    background-color: yellow;
+}

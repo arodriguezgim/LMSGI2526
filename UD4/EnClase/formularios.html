@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./enlaces.html">Enlaces e Imágenes</a></li>
+            <li><a href="./listas.html">Listas</a></li>
+            <li><a href="./tablas.html">Tablas</a></li>
+            <li><a href="./etiquetas.html">Nuevas etiquetas html5</a></li>
+            <li><a href="./formularios.html">Formularios</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <h1>Formularios</h1>
+    <form action="./formulariorecibido.html" method="post">
+        <!-- Aquí van todos campos del formulario -->
+        <p>
+            <label for="name">Nombre:</label> 
+            <input type="text" id="name" name="nombre" placeholder="Inserte su nombre">
+        </p>
+        <p>
+            <label for="apellido">Apellidos:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Apellidos">
+        </p>
+        <p>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" name="email" id="email" placeholder="Correo electrónico">
+        </p>
+        <p>
+            <label for="pass">Contraseña:</label>
+            <input type="password" name="pass" id="pass">
+        </p>
+        <p>
+            <label for="comentario">Comentario:</label>
+            <textarea name="comentario" id="comentario" rows="10" cols="60"></textarea>
+        </p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar Formulario">
+    </form>
+    <hr>
+
+    <button><a href="./registro.html">Ir a Formulario de registro</a></button>
+    
+</body>
+</html>
