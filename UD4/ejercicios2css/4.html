@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4 - Display None vs Visibility</title>
+    <style>
+        /*
+        EJERCICIO 4: DISPLAY NONE VS VISIBILITY HIDDEN
+        
+        Instrucciones:
+        1. Dale a todas las .caja un width de 200px, height de 100px
+        2. Añade padding de 15px, margin de 10px
+        3. Fondo #9b59b6 y color white, text-align center
+        4. Dale a .oculta-display un display: none
+        5. Observa que desaparece completamente y NO ocupa espacio
+        6. Dale a .oculta-visibility un visibility: hidden
+        7. Observa que es invisible pero SÍ ocupa espacio
+        */
+        
+        /* SOLUCIÓN */
+        body {
+           
+        }
+        
+        .caja {
+            
+        }
+        
+        .oculta-display {
+            
+            /* No ocupa espacio en el documento */
+        }
+        
+        .oculta-visibility {
+            
+            /* Ocupa espacio pero no es visible */
+        }
+    </style>
+</head>
+<body>
+    <h2>Diferencia entre display:none y visibility:hidden</h2>
+    
+    <div class="caja">Caja Visible 1</div>
+    <div class="caja oculta-display">Caja con display:none</div>
+    <div class="caja">Caja Visible 2</div>
+    <div class="caja oculta-visibility">Caja con visibility:hidden</div>
+    <div class="caja">Caja Visible 3</div>
+    
+    <p><strong>Nota:</strong> La caja con display:none desaparece completamente. 
+       La caja con visibility:hidden deja un espacio vacío.</p>
+</body>
+</html>

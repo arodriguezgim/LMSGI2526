@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 5 - Box Model</title>
+    <style>
+        /* Crea estilos para el elemento body que:
+           - Añada padding de 20px
+           - Establezca background-color #f5f5f5
+           - Establezca font-family Arial, sans-serif */
+
+        /* Crea una clase llamada caja-ejemplo que:
+           - Establezca width de 300px
+           - Establezca height de 100px
+           - Establezca background-color #3498db
+           - Añada padding-top de 20px
+           - Añada padding-right de 30px
+           - Añada padding-bottom de 20px
+           - Añada padding-left de 30px
+           - Añada border sólido de 5px color #2980b9
+           - Añada margin de 20px
+           - Establezca color de texto blanco */
+
+        /* Crea una clase llamada caja-border-box que:
+           - Establezca box-sizing: border-box
+           - Establezca width de 300px
+           - Establezca height de 100px
+           - Establezca background-color #e74c3c
+           - Añada padding de 20px
+           - Añada border sólido de 5px color #c0392b
+           - Añada margin de 20px
+           - Establezca color de texto blanco */
+
+        /* Crea una clase llamada caja-margenes que:
+           - Establezca width de 250px
+           - Establezca background-color #2ecc71
+           - Añada padding de 15px
+           - Establezca margin-top de 30px
+           - Establezca margin-bottom de 10px
+           - Establezca margin-left auto (para centrado horizontal)
+           - Establezca margin-right auto (para centrado horizontal)
+           - Establezca color de texto blanco
+           - Centre el texto */
+
+        /* Crea una clase llamada caja-padding que:
+           - Establezca width de 280px
+           - Establezca background-color #f39c12
+           - Añada padding: 10px 20px 30px 40px (top right bottom left)
+           - Añada margin de 20px
+           - Añada border sólido de 3px color #e67e22
+           - Establezca color de texto blanco */
+
+        /* Crea una clase llamada caja-outline que:
+           - Establezca width de 200px
+           - Añada padding de 20px
+           - Añada border sólido de 3px color #9b59b6
+           - Añada outline discontinuo de 3px color #8e44ad
+           - Establezca outline-offset de 5px
+           - Añada margin de 30px
+           - Establezca background-color #ecf0f1 */
+    </style>
+</head>
+
+<body>
+    <h1>Modelo de Cajas (Box Model)</h1>
+
+    <div class="caja-ejemplo">
+        Caja estándar: width 300px + padding 60px + border 10px = 370px total
+    </div>
+
+    <div class="caja-border-box">
+        Caja con box-sizing: border-box mantiene width total de 300px
+    </div>
+
+    <div class="caja-margenes">
+        Caja centrada con margin auto
+    </div>
+
+    <div class="caja-padding">
+        Padding diferente en cada lado (10px, 20px, 30px, 40px)
+    </div>
+
+    <div class="caja-outline">
+        Caja con outline (no afecta al box model)
+    </div>
+</body>
+
+</html>

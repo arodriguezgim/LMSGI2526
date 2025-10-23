@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 8 - Z-index y Capas</title>
+    <style>
+        /*
+        EJERCICIO 8: Z-INDEX Y SUPERPOSICIÓN DE CAPAS
+        
+        Instrucciones:
+        1. Dale a .contenedor position: relative, width 400px, height 300px
+        2. Crea 3 cajas superpuestas con position: absolute
+        3. .caja-roja: top 20px, left 20px, z-index 1
+        4. Width 150px, height 150px, fondo #e74c3c
+        5. .caja-azul: top 60px, left 60px, z-index 3
+        6. Width 150px, height 150px, fondo #3498db
+        7. .caja-verde: top 100px, left 100px, z-index 2
+        8. Width 150px, height 150px, fondo #2ecc71
+        9. Observa que el z-index controla qué caja está encima
+        10. Mayor z-index = más arriba en la pila
+        */
+        
+        /* SOLUCIÓN */
+
+    </style>
+</head>
+<body>
+    <h2>Z-index: Control de superposición</h2>
+    
+    <div class="contenedor">
+        <div class="caja caja-roja">Roja<br>z-index: 1</div>
+        <div class="caja caja-azul">Azul<br>z-index: 3</div>
+        <div class="caja caja-verde">Verde<br>z-index: 2</div>
+    </div>
+    
+    <p><strong>Nota:</strong> La caja azul (z-index: 3) está por encima de todas. 
+       La verde (z-index: 2) está en medio, y la roja (z-index: 1) está debajo.</p>
+    
+    <p><strong>Importante:</strong> El z-index solo funciona en elementos con position 
+       diferente de static (relative, absolute, fixed).</p>
+</body>
+</html>

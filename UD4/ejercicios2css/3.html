@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3 - Display Block vs Inline</title>
+    <style>
+        /*
+        EJERCICIO 3: DISPLAY BLOCK VS INLINE
+        
+        Instrucciones:
+        1. Dale a .elemento-block un display: block
+        2. Añade width de 200px, padding de 10px, margin de 5px
+        3. Fondo #3498db y color white
+        4. Dale a .elemento-inline un display: inline
+        5. Añade padding de 10px y background-color #e74c3c
+        6. Observa que inline NO acepta width/height ni margin vertical
+        7. Dale a .elemento-inline-block un display: inline-block
+        8. Añade width 150px, height 50px, padding 10px, margin 5px
+        9. Fondo #2ecc71 y color white
+        */
+        
+        /* SOLUCIÓN */
+        body {
+            
+        }
+        
+        .elemento-block {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            margin: 5px;
+            background: #3498db;
+            color: white;
+        }
+        
+        .elemento-inline {
+            display: inline;
+            padding: 10px;
+            background-color: #e74c3c;
+        }
+        
+        .elemento-inline-block {
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            padding: 10px;
+            margin: 5px;
+            background: #2ecc71;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Elementos Block (ocupan todo el ancho)</h2>
+    <div class="elemento-block">Block 1</div>
+    <div class="elemento-block">Block 2</div>
+    
+    <h2>Elementos Inline (en línea)</h2>
+    <span class="elemento-inline">Inline 1</span>
+    <span class="elemento-inline">Inline 2</span>
+    <span class="elemento-inline">Inline 3</span>
+    
+    <h2>Elementos Inline-Block (lo mejor de ambos)</h2>
+    <div class="elemento-inline-block">IB 1</div>
+    <div class="elemento-inline-block">IB 2</div>
+    <div class="elemento-inline-block">IB 3</div>
+</body>
+</html>

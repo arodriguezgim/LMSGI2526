@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2 - Box-Sizing</title>
+    <style>
+        /*
+        EJERCICIO 2: BOX-SIZING
+        
+        Instrucciones:
+        1. Dale a .caja-estandar un width de 300px
+        2. Añade padding de 20px y border de 5px solid #e74c3c
+        3. Observa que el tamaño total es mayor a 300px
+        4. Dale a .caja-border-box un width de 300px
+        5. Añade el mismo padding y border que antes
+        6. Aplica box-sizing: border-box para mantener el width en 300px exactos
+        7. Dale a ambas cajas un height de 100px y margin-bottom de 20px
+        */
+        
+        /* SOLUCIÓN */
+        .caja-estandar{
+            width: 300px;
+            padding: 20px;
+            border: 5px solid #e74c3c;
+            box-sizing: border-box;
+        }
+
+        .caja-border-box {
+            width: 300px;
+            padding: 20px;
+            border: 5px solid #e74c3c;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Caja estándar (content-box)</h2>
+    <div class="caja-estandar">Width total: 300px + 40px padding + 10px border = 350px</div>
+    
+    <h2>Caja con border-box</h2>
+    <div class="caja-border-box">Width total: 300px (incluye padding y border)</div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8 - Posicionamiento Fixed</title>
+    <style>
+        /*
+        ╔════════════════════════════════════════════════════════════════════╗
+        ║  EJERCICIO 8: POSICIONAMIENTO FIXED                               ║
+        ╠════════════════════════════════════════════════════════════════════╣
+        ║                                                                    ║
+        ║  ENUNCIADO:                                                        ║
+        ║  ----------                                                        ║
+        ║  Crea elementos que permanezcan fijos en la pantalla al hacer     ║
+        ║  scroll. Aprende a usar position: fixed.                          ║
+        ║                                                                    ║
+        ║  Para .header-fijo:                                               ║
+        ║  1. position: fixed                                               ║
+        ║  2. top: 0                                                         ║
+        ║  3. left: 0                                                        ║
+        ║  4. width: 100%                                                    ║
+        ║  5. background: #2c3e50                                           ║
+        ║  6. color: white                                                  ║
+        ║  7. padding: 20px                                                  ║
+        ║  8. box-shadow: 0 2px 10px rgba(0,0,0,0.2)                       ║
+        ║  9. z-index: 1000                                                 ║
+        ║                                                                    ║
+        ║  Para .boton-flotante:                                            ║
+        ║  1. position: fixed                                               ║
+        ║  2. bottom: 30px                                                   ║
+        ║  3. right: 30px                                                    ║
+        ║  4. width: 60px                                                    ║
+        ║  5. height: 60px                                                   ║
+        ║  6. background: #e74c3c                                           ║
+        ║  7. color: white                                                  ║
+        ║  8. border-radius: 50%                                            ║
+        ║  9. border: none                                                   ║
+        ║  10. font-size: 24px                                              ║
+        ║  11. cursor: pointer                                              ║
+        ║  12. box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4)               ║
+        ║  13. z-index: 1000                                                ║
+        ║                                                                    ║
+        ║  Para .sidebar-fijo:                                              ║
+        ║  1. position: fixed                                               ║
+        ║  2. left: 0                                                        ║
+        ║  3. top: 80px (debajo del header)                                 ║
+        ║  4. width: 200px                                                   ║
+        ║  5. height: calc(100vh - 80px)                                    ║
+        ║  6. background: #34495e                                           ║
+        ║  7. color: white                                                  ║
+        ║  8. padding: 20px                                                  ║
+        ║  9. overflow-y: auto                                              ║
+        ║                                                                    ║
+        ║  OBJETIVO: Entender position fixed y cómo permanece fijo          ║
+        ║            respecto al viewport al hacer scroll                   ║
+        ║                                                                    ║
+        ╚════════════════════════════════════════════════════════════════════╝
+        */
+        
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecf0f1;
+        }
+        
+        /* TU CÓDIGO AQUÍ */
+        .header-fijo {
+            /* Completa según el enunciado */
+        }
+        
+        .boton-flotante {
+            /* Completa según el enunciado */
+        }
+        
+        .sidebar-fijo {
+            /* Completa según el enunciado */
+        }
+        
+        /* Estilos auxiliares (NO MODIFICAR) */
+        .header-fijo h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .contenido-principal {
+            margin-left: 200px;
+            padding: 100px 40px 40px 40px;
+        }
+        
+        .seccion {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .seccion h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .seccion p {
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        
+        .info {
+            background-color: #d1ecf1;
+            padding: 20px;
+            border-left: 4px solid #17a2b8;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        
+        .info h3 {
+            margin-top: 0;
+            color: #0c5460;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+        
+        .sidebar-fijo h3 {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .sidebar-fijo ul {
+            list-style: none;
+        }
+        
+        .sidebar-fijo li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .sidebar-fijo a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .sidebar-fijo a:hover {
+            color: #5dade2;
+        }
+        
+        .boton-flotante:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
+        }
+        
+        .boton-flotante:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header fijo -->
+    <header class="header-fijo">
+        <h1>🔒 Header Fijo - Permanece visible al hacer scroll</h1>
+    </header>
+    
+    <!-- Sidebar fijo -->
+    <aside class="sidebar-fijo">
+        <h3>📌 Menú Fijo</h3>
+        <ul>
+            <li><a href="#seccion1">Sección 1</a></li>
+            <li><a href="#seccion2">Sección 2</a></li>
+            <li><a href="#seccion3">Sección 3</a></li>
+            <li><a href="#seccion4">Sección 4</a></li>
+            <li><a href="#seccion5">Sección 5</a></li>
+        </ul>
+        <p style="margin-top: 20px; font-size: 12px; opacity: 0.7;">
+            Este sidebar permanece fijo mientras haces scroll
+        </p>
+    </aside>
+    
+    <!-- Botón flotante -->
+    <button class="boton-flotante" title="Volver arriba">↑</button>
+    
+    <!-- Contenido principal -->
+    <main class="contenido-principal">
+        <div class="info">
+            <h3>📌 Conceptos importantes:</h3>
+            <p><code>position: fixed</code> → Se posiciona relativo al viewport (ventana del navegador)</p>
+            <p><strong>Permanece fijo al hacer scroll</strong></p>
+            <p><strong>Sale del flujo normal</strong> (no ocupa espacio)</p>
+        </div>
+        
+        <div class="seccion" id="seccion1">
+            <h2>Sección 1: ¿Qué es position: fixed?</h2>
+            <p>Position fixed posiciona un elemento relativo a la ventana del navegador (viewport).</p>
+            <p>El elemento permanece en la misma posición incluso cuando haces scroll en la página.</p>
+            <p>Es muy útil para crear headers fijos, menús de navegación o botones flotantes.</p>
+            <p>Haz scroll hacia abajo para ver cómo el header y el sidebar permanecen fijos.</p>
+        </div>
+        
+        <div class="seccion" id="seccion2">
+            <h2>Sección 2: Usos comunes</h2>
+            <p><strong>1. Headers fijos:</strong> Mantienen la navegación siempre accesible</p>
+            <p><strong>2. Sidebars fijos:</strong> Menús laterales que permanecen visibles</p>
+            <p><strong>3. Botones flotantes:</strong> Acciones rápidas como "volver arriba" o chat</p>
+            <p><strong>4. Modales y overlays:</strong> Ventanas emergentes centradas en la pantalla</p>
+            <p><strong>5. Barras de notificación:</strong> Avisos que permanecen visibles</p>
+        </div>
+        
+        <div class="seccion" id="seccion3">
+            <h2>Sección 3: Propiedades importantes</h2>
+            <p>Con position fixed, puedes usar:</p>
+            <p>• <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> para posicionar</p>
+            <p>• <code>z-index</code> para controlar el orden de apilamiento</p>
+            <p>• <code>width</code> y <code>height</code> para definir el tamaño</p>
+            <p>El elemento se posiciona respecto a las esquinas del viewport.</p>
+        </div>
+        
+        <div class="seccion" id="seccion4">
+            <h2>Sección 4: Diferencias con otros posicionamientos</h2>
+            <p><strong>fixed vs static:</strong> fixed sale del flujo y se mantiene en pantalla</p>
+            <p><strong>fixed vs relative:</strong> fixed no se basa en su posición original</p>
+            <p><strong>fixed vs absolute:</strong> fixed se posiciona respecto al viewport, no a un ancestro</p>
+            <p>El comportamiento de fixed es único y muy útil para elementos de UI.</p>
+        </div>
+        
+        <div class="seccion" id="seccion5">
+            <h2>Sección 5: Consejos y buenas prácticas</h2>
+            <p>✓ Usa z-index alto (ej: 1000) para asegurar que esté sobre otros elementos</p>
+            <p>✓ Considera el espacio que ocupa el header fijo (padding-top en body)</p>
+            <p>✓ Ten cuidado en móviles, los elementos fijos reducen el espacio visible</p>
+            <p>✓ Combina con media queries para ocultar elementos fijos en pantallas pequeñas</p>
+            <p>✓ Añade transiciones para efectos suaves (ej: header que aparece al hacer scroll)</p>
+        </div>
+        
+        <div class="info">
+            <h3>✅ Resultado esperado:</h3>
+            <p>✓ Header fijo en la parte superior que permanece visible al hacer scroll</p>
+            <p>✓ Sidebar fijo a la izquierda con menú de navegación</p>
+            <p>✓ Botón flotante en la esquina inferior derecha (rojo)</p>
+            <p>✓ Todos los elementos permanecen en su posición al hacer scroll</p>
+        </div>
+        
+        <!-- Contenido adicional para generar scroll -->
+        <div class="seccion">
+            <h2>Contenido adicional</h2>
+            <p>Este contenido extra está aquí para que puedas hacer scroll y ver cómo funcionan los elementos fijos.</p>
+            <p>Observa cómo el header, sidebar y botón permanecen en su posición mientras navegas.</p>
+            <p>Puedes hacer clic en los enlaces del sidebar para saltar entre secciones.</p>
+        </div>
+    </main>
+</body>
+</html>
