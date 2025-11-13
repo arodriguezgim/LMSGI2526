@@ -75,7 +75,7 @@ Esto es un ejemplo de HTML
 
 ## Imágenes
 
-![Texto de la imagen](https://e7.pngegg.com/pngimages/195/304/png-clipart-visual-studio-code-logo-thumbnail-tech-companies-thumbnail.png)
+![Texto de la imagen](./logo_vscode.png)
 
 ## Listas de tareas
 
