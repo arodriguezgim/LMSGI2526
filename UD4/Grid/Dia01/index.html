@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container {
+            /*background-color: lightblue;
+            border: 3px solid black;
+            border-radius: 10px;*/
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px;
+            grid-auto-rows: 75px;
+            gap: 5px;
+           
+        }
+
+        .container div {
+            background-color: lightsalmon;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .container div:first-child{
+            background-color: lightgreen;
+            grid-column: 2 / 4;
+        }
+        .container div:nth-child(2){
+            background-color: lightgoldenrodyellow;
+            grid-row: span 3;
+        }
+        .c5{
+            background-color: lightpink !important;
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clase de Grid Layout en CSS</h1>
+    <section class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div class="c5">5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+    </section>
+</body>
+</html>

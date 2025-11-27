@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto</title>
+    <style>
+        .contenedor{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            grid-template-rows: 175px 80px 60px 150px ;
+        }
+        .caja {
+            background-color: lightcyan;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        .caja1 {
+            background-color: aquamarine;
+            grid-column: 1 / 3;
+        }
+        .caja2 {
+            grid-row: span 2;
+        }
+        .caja3{
+            background-color: lightsalmon;
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .caja4{
+            background-color: lightseagreen;
+            grid-row: span 2;
+        }
+    </style>
+</head>
+<body>
+    <section class="contenedor">
+        <div class="caja caja1">1</div>
+        <div class="caja caja2">2</div>
+        <div class="caja caja3">3</div>
+        <div class="caja caja4">4</div>
+        <div class="caja caja5">5</div>
+        <div class="caja caja6">6</div>
+    </section>
+</body>
+</html>
