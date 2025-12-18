@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container py-4">
+        <form action="">
+            <div class="mb-3 row">
+                <label class="col-form-label col-2" for="nombre">Nombre</label>
+                <input class="form-control col" type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre">
+            </div>
+            <div class="mb-3 row">
+                <label class="col-form-label col-2" for="apellido">Apellido</label>
+                <input class="form-control col" type="text" id="apellido" name="apellido" disabled value="Rodriguez">
+            </div>
+            <div class="mb-3 row">
+                <label class="col-form-label col-2" for="correo">Correo electrónico:</label>
+                <input class="form-control col" type="email" id="correo" name="correo" placeholder="Email">
+            </div>
+            <div class="mb-3 row">
+                <label class="col-form-label col-2" for="asunto">Asunto:</label>
+                <textarea class="form-control col" name="asunto" id="asunto" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                <button class="btn btn-outline-success btn-lg" type="submit">Enviar</button>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>
