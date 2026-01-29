@@ -18,8 +18,8 @@
 
 ## Evaluación 2
 
-- UD5 - Uso de frameworks en entornos web: Bootstrap / Tailwind
-- UD6 - XML y JSON: Definición de esquemas y almacenamiento de información
+- [UD5 - Uso de frameworks en entornos web: Bootstrap / Tailwind]('https://getbootstrap.com/')
+- [UD6 - XML y JSON: Definición de esquemas y almacenamiento de información](./UD6/readme.md)
 
 ## Evaluación 3
 
