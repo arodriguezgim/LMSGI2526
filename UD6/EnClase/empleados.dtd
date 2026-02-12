@@ -1,0 +1,9 @@
+<!ELEMENT empresa (departamentos, empleados )>
+
+<!ELEMENT departamentos (departamento+)>
+<!ELEMENT departamento (nombre, ubicacion)>
+<!ATTLIST departamento 
+        id ID #REQUIRED
+        codigo CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT ubicacion (#PCDATA)>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tiendaMusica>
+    <disco id="D001">
+        <titulo>Mayeutica</titulo>
+        <artista>Robe</artista>
+        <año>2021</año>
+        <genero>Rock transgresivo</genero>
+        <precio moneda="EUR">20.00</precio>
+        <canciones>
+            <cancion numero="1">
+                <titulo>Primer movimiento</titulo>
+                <duracion>6:34</duracion>
+            </cancion>
+            <cancion numero="2">
+                <titulo>Segundo movimiento</titulo>
+                <duracion>4:34</duracion>
+            </cancion>
+            <cancion numero="3">
+                <titulo>Tercer movimiento</titulo>
+                <duracion>8:39</duracion>
+            </cancion>
+        </canciones>
+    </disco>
+    <disco id="D002">
+        <titulo>Una odisea musical</titulo>
+        <artista>Chasis</artista>
+        <año>2001</año>
+        <genero>Makina</genero>
+        <precio moneda="EUR">15.00</precio>
+        <canciones>
+            <cancion numero="1">
+                <titulo>Fly on the wings of love</titulo>
+                <duracion>5:34</duracion>
+            </cancion>
+            <cancion numero="2">
+                <titulo>Atlantis</titulo>
+                <duracion>4:34</duracion>
+            </cancion>
+        </canciones>
+    </disco>
+    <disco id="D003">
+        <titulo>Trilogy</titulo>
+        <artista>Pont Aeri</artista>
+        <año>1999</año>
+        <genero>Makina / Hardcore</genero>
+        <precio moneda="EUR">18.00</precio>
+        <canciones>
+            <cancion numero="1">
+                <titulo>Flying Free</titulo>
+                <duracion>5:34</duracion>
+            </cancion>
+            <cancion numero="2">
+                <titulo>Reaching Dreams</titulo>
+                <duracion>4:34</duracion>
+            </cancion>
+        </canciones>
+    </disco>
+</tiendaMusica>
