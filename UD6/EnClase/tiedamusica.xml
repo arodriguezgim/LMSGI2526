@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <tiendaMusica>
     <disco id="D001">
         <titulo>Mayeutica</titulo>
@@ -56,3 +57,38 @@
         </canciones>
     </disco>
 </tiendaMusica>
+
+
+
+
+<departamentos>
+    <departamento id="" codigo="">
+        <nombre></nombre>
+        <ubicacion></ubicacion>
+    </departamento>
+    <departamento id="" codigo="">
+        <nombre></nombre>
+        <ubicacion></ubicacion>
+    </departamento>
+    <departamento id="" codigo="">
+        <nombre></nombre>
+        <ubicacion></ubicacion>
+    </departamento>
+    <departamento id="" codigo="">
+        <nombre></nombre>
+        <ubicacion></ubicacion>
+    </departamento>
+    <departamento id="" codigo="">
+        <nombre></nombre>
+        <ubicacion></ubicacion>
+    </departamento>
+</departamentos>
+
+<empleados>
+    <empleado dni="18554234C">
+        <nombreCompleto></nombreCompleto>
+        <apellidos></apellidos>
+        <fechaNcto>24 enero 2312</fechaNcto>
+        <departamentoRef refDep="r3efre"></departamentoRef>
+    </empleado>
+</empleados>

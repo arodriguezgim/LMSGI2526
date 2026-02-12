@@ -7,3 +7,12 @@
         codigo CDATA #REQUIRED>
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT ubicacion (#PCDATA)>
+
+<!ELEMENT empleados (empleado+)>
+<!ELEMENT empleado (nombreCompleto, apellidos, fechaNcto, departamentoRef, email?, telefono? )>
+<!ATTLIST empleado dni ID #REQUIRED>
+<!ELEMENT nombreCompleto (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT fechaNcto (#PCDATA)>
+<!ELEMENT departamentoRef EMPTY >
+<!ATTLIST departamentoRef refDep ID #REQUIRED>
