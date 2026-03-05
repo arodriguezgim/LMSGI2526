@@ -3,7 +3,7 @@
             xsi:noNamespaceSchemaLocation="videojuegos.xsd">
   
     <videojuego id="VJ001">
-        <titulo>The Legend of Zelda: Breath of the Wild</titulo>
+        <titulo>The Leg:end of Zelda: Breath of the Wild</titulo>
         <desarrolladora>Nintendo</desarrolladora>
         <año>2017</año>
         <plataformas>
