@@ -260,7 +260,7 @@ JSON soporta seis tipos de datos. Las cadenas de texto se escriben entre comilla
 
 **Ejercicio 8:** Crea un documento JSON que represente el catálogo de una librería online con al menos 5 libros. Incluye información como título, autores (puede ser múltiple), ISBN, editorial, año de publicación, precio, stock disponible, categorías (array), y valoración media de usuarios.
 
-## 5. JSON Schema
+## 5. JSON Schema (no entra para examen)
 
 JSON Schema es un vocabulario que permite anotar y validar documentos JSON. Define la estructura esperada, los tipos de datos y las restricciones que debe cumplir un documento JSON válido.
 
@@ -382,8 +382,6 @@ XML es preferible en documentos complejos con metadatos extensos, sistemas empre
 
 JSON es más adecuado para APIs REST y comunicación web, configuración de aplicaciones modernas, almacenamiento en bases de datos NoSQL, intercambio de datos en aplicaciones móviles, y situaciones donde el tamaño del archivo y la velocidad de procesamiento son críticos.
 
-**Ejercicio 11:** Diseña un sistema de configuración para una aplicación. Crea tanto la versión XML con su DTD o XSD, como la versión JSON con su JSON Schema. La configuración debe incluir: parámetros de conexión a base de datos (host, puerto, usuario, contraseña), configuración de logs (nivel, archivo, rotación), y configuración de caché (activada, tamaño máximo, tiempo de expiración).
-
 ## 7. Almacenamiento y procesamiento
 
 El almacenamiento y procesamiento eficiente de documentos XML y JSON es fundamental en el desarrollo de aplicaciones modernas.
@@ -398,13 +396,10 @@ Para XML existen múltiples tecnologías de procesamiento. DOM carga todo el doc
 
 Para JSON, prácticamente todos los lenguajes de programación incluyen bibliotecas para parsear y generar JSON. JSONPath es similar a XPath para consultar documentos JSON. Herramientas como jq permiten procesamiento en línea de comandos. JMESPath proporciona un lenguaje de consulta potente para estructuras JSON complejas.
 
-**Ejercicio 12:** Investiga las bibliotecas de tu lenguaje de programación preferido (Python, Java, JavaScript, PHP, etc.) para trabajar con XML y JSON. Escribe un programa simple que lea un archivo XML de libros, lo convierta a JSON y lo guarde. Luego, lee el JSON y muestra en pantalla los títulos de todos los libros publicados después del año 2000.
 
-**Ejercicio 13 (Proyecto final):** Desarrolla un sistema completo de gestión de videojuegos que incluya:
+**Ejercicio 11 (Repaso general):** Desarrolla un sistema completo de gestión de videojuegos que incluya, a partir del xml que se te proporciona (documento XML que almacene al menos 10 videojuegos con información como título, desarrolladora, año, plataformas (array), género, precio, y valoración.).
 
-1. Un documento XML que almacene al menos 10 videojuegos con información como título, desarrolladora, año, plataformas (array), género, precio, y valoración.
-2. Un DTD o XSD completo que valide el XML.
-3. La conversión de ese XML a formato JSON.
-4. Un JSON Schema que valide el documento JSON.
-5. Documentación en Markdown explicando las decisiones de diseño, la estructura elegida y justificando cuándo usarías XML vs JSON en un sistema real de gestión de videojuegos.
+1. Un DTD o XSD completo que valide el XML.
+2. La conversión de ese XML a formato JSON.
+
 

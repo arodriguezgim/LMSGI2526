@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE peliculas SYSTEM "peliculas.dtd">
+<peliculas>
+    <pelicula id="INC0001" titulo="Inception" clasificacion="PG-13">
+        <actores>
+            <actor codigo="A001" rol="protagonista">
+                <nombre>Leonardo</nombre>
+                <apellido>DiCaprio</apellido>
+                <edad>46</edad>
+            </actor>
+            <actor codigo="A002" rol="protagonista">
+                <nombre>Marion</nombre>
+                <apellido>Cotillard</apellido>
+                <edad>45</edad>
+            </actor>
+            <actor codigo="A003" rol="secundario">
+                <nombre>Joseph</nombre>
+                <apellido>Gordon-Levitt</apellido>
+                <edad>40</edad>
+            </actor>
+            <actor codigo="A004" rol="secundario">
+                <nombre>Tom</nombre>
+                <apellido>Hardy</apellido>
+                <edad>44</edad>
+            </actor>
+        </actores>
+        <director>Christopher Nolan</director>
+        <año>2010</año>
+        <duracion>148</duracion>
+        <sinopsis>
+            Un ladrón que roba secretos corporativos a través del uso de la tecnología de 
+            compartir sueños recibe la tarea inversa de plantar una idea en la mente del 
+            CEO de una empresa. Una película que explora los límites de la realidad y los sueños.
+        </sinopsis>
+        <genero nombre="Ciencia ficción"/>
+        <genero nombre="Thriller"/>
+        <genero nombre="Acción"/>
+    </pelicula>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE pelicula SYSTEM "pelicula.dtd">
+    <pelicula id="INC0001" titulo="Inception" clasificacion="PG-13">
+        <actores>
+            <actor codigo="A001" rol="protagonista">
+                <nombre>Leonardo</nombre>
+                <apellido>DiCaprio</apellido>
+                <edad>46</edad>
+            </actor>
+            <actor codigo="A002" rol="protagonista">
+                <nombre>Marion</nombre>
+                <apellido>Cotillard</apellido>
+                <edad>45</edad>
+            </actor>
+            <actor codigo="A003" rol="secundario">
+                <nombre>Joseph</nombre>
+                <apellido>Gordon-Levitt</apellido>
+                <edad>40</edad>
+            </actor>
+            <actor codigo="A004" rol="secundario">
+                <nombre>Tom</nombre>
+                <apellido>Hardy</apellido>
+                <edad>44</edad>
+            </actor>
+        </actores>
+        <director>Christopher Nolan</director>
+        <año>2010</año>
+        <duracion>148</duracion>
+        <sinopsis>
+            Un ladrón que roba secretos corporativos a través del uso de la tecnología de 
+            compartir sueños recibe la tarea inversa de plantar una idea en la mente del 
+            CEO de una empresa. Una película que explora los límites de la realidad y los sueños.
+        </sinopsis>
+        <genero nombre="Ciencia ficción"/>
+        <genero nombre="Thriller"/>
+        <genero nombre="Acción"/>
+    </pelicula>
+</peliculas>
