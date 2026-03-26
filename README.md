@@ -28,6 +28,9 @@
   - [1ª Parte – Declaración de variables, arrow functions, interpolación, desestructuración, spread](./UD7/parte1.md)
     - [Ejercicios para que repases](./UD7/ejercicios1.md)
   - [2ª Parte – Arrays, Métodos Funcionales y Trabajo con Datos](./UD7/parte2.md)
+    - [Ejercicios para que repases](./UD7/ejercicios2.md)
+  - [3ª Parte – Asincronía y DOM en JavaScript](./UD7/parte3.md)
+    - [Ejercicios para Semana Santa](./UD7/ejerciciosSemanaSanta.md)
 
 - UD8 - Introducción a Frameworks avanzados: VueJS / Astro
 - ~~- UD9 - Sistemas de Gestión Empresarial *~~
