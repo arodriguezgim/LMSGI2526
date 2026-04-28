@@ -32,7 +32,7 @@
   - [3ª Parte – Asincronía y DOM en JavaScript](./UD7/parte3.md)
     - [Ejercicios para Semana Santa](./UD7/ejerciciosSemanaSanta.md)
 
-- UD8 - Introducción a Frameworks avanzados: VueJS / Astro
+- [UD8 - Introducción a Frameworks avanzados: VueJS / Astro](./UD8/readme.md)
 - ~~- UD9 - Sistemas de Gestión Empresarial *~~
 
 * (En 2º de DAM existe el módulo dedicado exclusivamente a SGE, por lo que no lo veremos en este curso)
