@@ -1,58 +1,75 @@
 <script setup>
-    const nombre = "Vue 3"
-    const arrayFrutas = ["🍎", "🍌", "🍉", "🍓", "🍒"];
-    const descargaFrutas = [
-        {
-            name: "Manzana",
-            price: "1.00€",
-            description: "Manzana Golden",
-            stock: 0
-        },
-        {
-            name: "Pera",
-            price: "2.00€",
-            description: "Pera Conferencia",
-            stock: 10,
-        },
-        {
-            name: "Naranja",
-            price: "3.00€",
-            description: "Naranjas de Valencia",
-            stock: 20
-        },
-    ]
-    const fruta = {
-            name: "Fresa",
-            price: "4.00€",
-            description: "Freson de Palos"
-        };
+    import { computed, ref } from 'vue'
+
+    // Métodos
+    /*
+    const manejarClick = ( mensaje ) => {
+        console.log( mensaje )
+    }
+    const manejarClick2 = (  ) => {
+        console.log( 'Click 2' )
+    }*/
+
+    const contador = ref( 0 )
+
+    const incrementar = () => {
+        contador.value++
+    }
+    const decrementar = () => {
+        contador.value--
+    }
+    const resetear = () => {
+        contador.value = 0
+    }
+
+    // Propiedades Computadas
+    const claseContador = computed( ()=>{
+        if ( contador.value === 0 ){
+            return 'zero'
+        }
+        return contador.value > 0 ? 'verde' : 'rojo'
+    })
+
+    const arrayFavoritos = ref([])
+
+    const addFavorito = () => {
+        arrayFavoritos.value.push( contador.value )
+    }
 </script>
+
 <template>
-    <h1>Hola {{ nombre  }}</h1>
-    <hr>
-    <h3>Directiva v-for</h3>
-    <p> Recorremos un Array </p>
-    <ul>
-        <li 
-            v-for="(fruta, index) in arrayFrutas"
-            :key="index">
-            {{ index }} - {{ fruta }}
-        </li>
-    </ul>
-    <hr>
-    <p>Recorremos un Array de Objetos</p>
-    <ul>
-        <li v-for="fruta in descargaFrutas" :key="fruta.name">
-            {{ fruta.name }} - {{ fruta.description }} -- {{ fruta.price }}
-        </li>
-    </ul>
-    <hr>
-    <p>Recorremos un objeto</p>
-    <ul>
-        <li v-for="(valor, propiedad) in fruta">
-            {{  propiedad }} - {{ valor }} 
-        </li>
-    </ul>
-    <hr>
-    <p>Lista de productos con 10 o más unidades</p>
+    <div class="container">
+        <div class="text-center">
+                <!--
+                <button v-on:click="manejarClick('Mensaje como parámetro')">Click Aquí</button>
+                <button @click="manejarClick2">Boton 2</button>-->
+                <hr>
+                <h1>Contador</h1>
+                <h1 :class="claseContador">{{ contador }}</h1>
+                <div class="btn-group">
+                    <button @click="decrementar" class="btn btn-danger">Decrementar</button>
+                    <button @click="resetear" class="btn btn-primary">Resetear</button>
+                    <button @click="incrementar" class="btn btn-success">Aumentar</button>
+                    <button @click="addFavorito" class="btn btn-info">Favorito</button>
+                </div>
+                <h3>Favoritos</h3>
+                <ul>
+                    <li v-for="favorito in arrayFavoritos">
+                        {{ favorito }}
+                    </li>
+                </ul>
+        </div>
+    </div>
 </template>
+
+<style>
+    .rojo {
+        color: red;
+    }
+    .verde {
+        color: green;
+    }
+    .zero {
+        color: yellow;
+    }
+</style>
