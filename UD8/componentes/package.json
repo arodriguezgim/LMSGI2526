@@ -1,6 +1,6 @@
 {
-  "name": "hola-mundo",
-  "version": "1.0.0",
+  "name": "componentes",
+  "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,11 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.5.31"
+    "bootstrap": "^5.3.8",
+    "vue": "^3.5.32"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.5",
-    "vite": "^8.0.3",
+    "@vitejs/plugin-vue": "^6.0.6",
+    "vite": "^8.0.8",
     "vite-plugin-vue-devtools": "^8.1.1"
   },
   "engines": {
